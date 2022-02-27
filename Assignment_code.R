@@ -29,6 +29,7 @@ mean(lm1.predict)
 
 #the second linear regression model
 lm2 <- lm(re78 ~ . + I(treat*nodegr), data = lalonde.train)
+summary(lm2)
 lm2.predict <- predict(lm2, lalonde.test)
 MSE <- MSE(lm2.predict, lalonde.test$re78)
 MSE
