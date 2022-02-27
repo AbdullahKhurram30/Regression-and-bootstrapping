@@ -3,7 +3,7 @@
 # "install.packages("") command"
 library(Matching)
 library(arm)
-library(Melmetrics)
+library(MLmetrics)
 library(tree)
 library(randomForest)
 data("lalonde")
