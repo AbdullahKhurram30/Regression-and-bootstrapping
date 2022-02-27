@@ -79,6 +79,12 @@ rf_MSE
 mean(rf_pred)
 quantile(rf_pred, probs = c(0.025, 0.975))
 
+#finding the OOB
+df <- lalonde
+keep <- 9 # number of the re78 column
+df <- df[, -keep] #removing the re78 column
+tuneRF(df, lalonde$re78) #gives output of OOB for multiple mtry valuees, we pick the value for mtry = 3 for ours because that is what we used
+
 #Predicting values via simulation for the first linear regression model
 # for people with high school degree, the average educ value is 12
 # for people without high school degree, the average educ value is 10
